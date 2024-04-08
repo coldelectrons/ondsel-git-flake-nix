@@ -38,7 +38,7 @@
 , scipy
 , shiboken2
 , soqt
-  # , spaceNavSupport ? stdenv.isLinux
+  , spaceNavSupport ? stdenv.isLinux
 , swig
 , vtk
 , wrapQtAppsHook
@@ -170,8 +170,8 @@
       cp -r ${feedstock}/recipe/branding $out/share/Gui/Ondsel
 
       mv $out/share/doc $out
-      ln -s $out/bin/FreeCAD $out/bin/freecad
-      ln -s $out/bin/FreeCADCmd $out/bin/freecadcmd
+      ln -s $out/bin/FreeCAD $out/bin/freecad-ondsel
+      ln -s $out/bin/FreeCADCmd $out/bin/freecadcmd-ondsel
     '';
 
 })
